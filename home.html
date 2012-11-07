@@ -1,0 +1,125 @@
+
+<center>
+  <img src="logo.png" />
+</center>
+
+<h1>Peano - a Framework for Solvers on Spacetree Grids</h1>
+<h2>www.peano-framework.org</h2>
+
+
+<p>
+Peano is an open source C++ solver framework. 
+It is based upon the fact that spacetrees, a generalisation of the classical 
+octree concept, yield a cascade of adaptive Cartesian grids. 
+Consequently, any spacetree traversal is equivalent to an element-wise 
+traversal of the hierarchy of the adaptive Cartesian grids. 
+The software Peano realises such a grid traversal and storage algorithm, and 
+it provides hook-in points for applications performing per-element, per-vertex, 
+and so forth operations on the grid. 
+It also provides interfaces for dynamic load balancing, sophisticated 
+geometry representations, and so forth.
+Some features are enlisted below.
+</p>
+
+<table  class="featuretable">
+  <tr>
+    <td> <b>Features</b> </td>
+    <td> <b>Parallelisation</b> </td>
+    <td> <b>Extensions</b> </td>
+  </tr>
+  <tr>
+    <td> Arbitrary dynamic adaptivity </td>
+    <td> MPI support (domain decomposition) </td>
+    <td> In-situ data exploration </td>
+  </tr>
+  <tr>
+    <td> Arbitrary spatial dimensions </td>
+    <td> OpenMP, TBB, or C++11 support (red-black colouring) </td>
+    <td> Multiscale data compression with reduced floating point accuracy </td>
+  </tr>
+  <tr>
+    <td> Inherent geometric multiscale representation of the computational domain </td>
+    <td> Plug-in points for hybrid load balancing </td>
+  </tr>
+  <tr>
+    <td> Low memory requirements </td>
+    <td> Preliminary resilience support (Cobra) </td>
+  </tr>
+  <tr>
+    <td> Good cache and memory bus behaviour </td> 
+  </tr>
+  <tr>
+    <td> Complex-valued degrees of freedom </td>
+  </tr>
+</table>
+
+<p>
+While the software was originally written for matrix-free geometric multigrid 
+solvers in computational fluid dynamics, it has meanwhile emancipated from this 
+single purpose and became a general-purpose AMR grid management and traversal 
+tool. 
+Other groups use it for Lattice-Boltzmann or particle codes.
+</p>
+
+
+
+<h2>Copyright and Support</h2>
+<p>
+Peano is open source software primarily developed from 2009-2012 at Technische Universit&auml;t M&uuml;nchen,
+and it is delivered as source code only. 
+Its license is available on the Copyright page to your left. 
+As support, there is a Peano developer list, but noone commits to give support.
+If you want to subscribe/unsubscribe the maillist, just write an <a href="mailto:join-maillist-at-peano-framework.org">email to the join-maillist account</a>.
+For bug reports, please also register to the maillist and post your bug description to the 
+Peano community.
+If you need further information on Peano, please contact <a href="mailto:info-at-peano-framework.org">the info email</a>.
+<p>
+<p>
+Most of the documentation is done directly in the source code, but there are 
+some mini tutorials available in the project wiki. Also, the example applications
+might be a good starting point to get familiar with Peano.
+</p>
+
+
+<h2>Citing Peano</h2>
+<p>
+If you use Peano, please cite it as 
+</p>
+<pre>
+@Misc{Software:Peano,
+  author = {Tobias Weinzierl and others},
+  title  = {Peano---a {F}ramework for {PDE} {S}olvers on {S}pacetree {G}rids},
+  url    = {http://www5.in.tum.de/peano},
+  year   = {2012},
+  note   = {www5.in.tum.de/peano}
+}
+</pre>
+<p>
+or refer to the book <a href="http://www.dr.hut-verlag.de/978-3-86853-146-6.html" target="_blank">A 
+Framework for Parallel PDE Solvers on Multiscale Adaptive Cartesian Grids</a>. 
+Some papers either using Peano or describing pices of it en detail are enlisted at 
+the pages section to the left.
+The paper descriping the fundamental ideas of Peano is 
+</p>
+<pre>
+@article{weinzierl11peano,
+    author = {Weinzierl, Tobias and Mehl, Miriam},
+    journal = {SIAM Journal on Scientific Computing},
+    editor = {Tuminaro, R. and Benzi, M. and Cai, X.-C. and Duff, I. and Elman, H. and 
+              Freund, R. and Jordan, K. and Kelley, T. and Keyes, D. and Kilmer, M. and 
+              Leyffer, S. and Manteuffel, T. and McCormick, S. and Silvester, D. and 
+              Walker, H. and Woodward, C. and Yavneh, I.},
+    institution = {SIAM},
+    month = oct,
+    number = {5},
+    organization = {SIAM},
+    pages = {2732--2760},
+    series = {Special Section: 2010 Copper Mountain Conference},
+    title = {Peano -- A Traversal and Storage Scheme for Octree-Like Adaptive Cartesian Multiscale Grids},
+    volume = {33},
+    year = {2011},
+    ISSN = {1064-8275},
+    URL = {http://link.aip.org/link/?SCE/33/2732}
+}
+</pre>
+
