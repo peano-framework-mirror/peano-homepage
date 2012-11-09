@@ -21,35 +21,37 @@ geometry representations, and so forth.
 Some features are enlisted below.
 </p>
 
-<table  class="featuretable">
+<table  border="1" style="background-color:#dedeee">
   <tr>
     <td> <b>Features</b> </td>
     <td> <b>Parallelisation</b> </td>
     <td> <b>Extensions</b> </td>
+    <td> <b>Applications</b> </td>
   </tr>
   <tr>
     <td> Arbitrary dynamic adaptivity </td>
     <td> MPI support (domain decomposition) </td>
     <td> In-situ data exploration </td>
+    <td> Interface to PyClaw/ClawPack </td>
   </tr>
   <tr>
     <td> Arbitrary spatial dimensions </td>
-    <td> OpenMP, TBB, or C++11 support (red-black colouring) </td>
-    <td> Multiscale data compression with reduced floating point accuracy </td>
+    <td> OpenMP, TBB, or C++11 support <br /> (red-black colouring) </td>
+    <td> Multiscale data compression <br &> with reduced floating point <br /> accuracy </td>
   </tr>
   <tr>
-    <td> Inherent geometric multiscale representation of the computational domain </td>
-    <td> Plug-in points for hybrid load balancing </td>
+    <td> Inherent geometric multiscale <br /> representation of the computational <br /> domain </td>
+    <td> Plug-in points for hybrid <br /> load balancing </td>
   </tr>
   <tr>
     <td> Low memory requirements </td>
-    <td> Preliminary resilience support (Cobra) </td>
+    <td> Resiliency support due to <br /><a href="http://www.exascience.com/cobra/" target="_blank">Cobra</a> </td>
   </tr>
   <tr>
-    <td> Good cache and memory bus behaviour </td> 
+    <td> Good cache and memory bus <br /> behaviour </td> 
   </tr>
   <tr>
-    <td> Complex-valued degrees of freedom </td>
+    <td> Complex-valued degrees of <br /> freedom </td>
   </tr>
 </table>
 
@@ -86,6 +88,7 @@ might be a good starting point to get familiar with Peano.
 <p>
 If you use Peano, please cite it as 
 </p>
+<table  border="1"><tr><td>
 <pre>
 @Misc{Software:Peano,
   author = {Tobias Weinzierl and others},
@@ -95,6 +98,7 @@ If you use Peano, please cite it as
   note   = {www5.in.tum.de/peano}
 }
 </pre>
+</td></tr></table>
 <p>
 or refer to the book <a href="http://www.dr.hut-verlag.de/978-3-86853-146-6.html" target="_blank">A 
 Framework for Parallel PDE Solvers on Multiscale Adaptive Cartesian Grids</a>. 
@@ -102,6 +106,7 @@ Some papers either using Peano or describing pices of it en detail are enlisted 
 the pages section to the left.
 The paper descriping the fundamental ideas of Peano is 
 </p>
+<table  border="1"><tr><td>
 <pre>
 @article{weinzierl11peano,
     author = {Weinzierl, Tobias and Mehl, Miriam},
@@ -123,4 +128,5 @@ The paper descriping the fundamental ideas of Peano is
     URL = {http://link.aip.org/link/?SCE/33/2732}
 }
 </pre>
+</td></tr></table>
 
