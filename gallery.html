@@ -4,11 +4,10 @@
 <table>
 
  <tr>
-   <td>
+   <td valign="top">
     <h2>Lattice Boltzmann</h2>
     <a href="http://www5.in.tum.de/wiki/index.php/Philipp_Neumann" target="_blank">Philipp 
     Neumann's</a> Lattice-Boltzmann code: Flow around an obstacle on adaptive Cartesian grid. 
-    <hr />
    </td>
    <td>
     <a href="gallery/lb_grid.png">
@@ -31,17 +30,31 @@
       <img src="gallery/peanoclaw_shockbubble1_icon.png" />
     </a>
    </td>
-   <td>
+   <td valign="top">
      <hr />
      <h2>PeanoClaw</h2>
      <a href="http://www5.in.tum.de/wiki/index.php/Kristof_Unterweger" target="_blank">Kristof 
      Unterweger's</a> PeanoClaw couples PyClaw with Peano: Shockfront hitting a bubble of different 
-     material. There is also a <a href="gallery/peanoclaw_shockbubble.avi">video</a> available. 
-     <hr />
+     material. This experiment is also available as video in
+     <a href="gallery/peanoclaw_shockbubble.avi">2d</a> and <a href="gallery/peanoclaw_shockbubble25d.avi">2.5d</a>
+     (i.e. computed as 2d problem but visualised 3d). 
    </td>
  </tr>
 
  <tr>
+   <td valign="top">
+     <hr />
+     <h2>Particle-in-Tree</h2>
+     1.0e6 particles with random speed run through the unit square with reflecting boundaries. 
+     The grid is refined such that the number of particles per cell does not exceed ten. As the 
+     particles do not interact with each other, this is a pure algorithmic demonstrator for 
+     particles in Peano. It does not comprise any Physics.
+     There are also a <a href="gallery/pit_2d.avi">2d video</a> and a 
+     <a href="gallery/pit_2d.avi">3d video</a> available. 
+     Joint work of 
+     <a href="http://people.cs.kuleuven.be/~bart.verleye/" target="_blank">Bart Verleye</a> and 
+     <a href="http://www5.in.tum.de/wiki/index.php/Dr._rer._nat._Tobias_Weinzierl" target="_blank">Tobias Weinzierl</a>.
+   </td>
    <td>
     <a href="gallery/pit_2d.png" />
       <img src="gallery/pit_2d_icon.png" />
@@ -50,17 +63,6 @@
     <a href="gallery/pit_3d.png" />
       <img src="gallery/pit_3d_icon.png" />
     </a>
-   </td>
-   <td>
-     <hr />
-     <h2>Particle-in-tree</h2>
-     1.0e6 particles with random speed run through the unit square with reflecting boundaries. 
-     The grid is refined such that the number of particles per cell does not exceed ten. As the 
-     particles do not interact with each other, this is a pure algorithmic demonstrator for 
-     particles in Peano. It does not represent any Physics.
-     There are also a <a href="gallery/pit_2d.avi">2d video</a> and a 
-     <a href="gallery/pit_2d.avi">3d video</a> available. 
-     <hr />
    </td>
  </tr> 
 </table>
