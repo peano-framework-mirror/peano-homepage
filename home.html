@@ -135,8 +135,63 @@ A paper describing the fundamental ideas of Peano is
 </p>
 
 
-<h2>Supported machines</h2>
+<h2>Supported environments</h2>
 
-Peano currently is developed with gcc 4.7 and the Intel compiler 13.0.1 both on 
-Windows machines (with MinGW and Visual C++ Express 2010) and Linux platforms. 
-The application PeanoClaw built with Peano is developed under MacOS X.
+
+<table>
+  <tr>
+    <td> <b>Compiler/lib</b> </td> 
+    <td> <b>System</b> </td>
+    <td> <b>Recommended options</b> </td>
+  </tr>
+  <tr>
+    <td> gcc 4.7 (g++) </td>
+    <td> Linux   </td>
+    <td>-O3 -pedantic -pedantic-errors -Wall -Werror -Wstrict-aliasing -fstrict-aliasing</td>
+  </tr>
+  <tr>
+    <td> Intel 13.0.1 (icpc) </td>
+    <td> Linux   </td>
+    <td> /DNOMINMAX /D__WIN32__ /O3 /Ob0 /QxSSE4.2 /Qip /Zi </td>
+  </tr>
+  <tr>
+    <td> Intel 13.0.1 (icl) </td>
+    <td> Windows </td>
+    <td> -fast -fstrict-aliasing  -DMPICH_IGNORE_CXX_SEEK -fast -fno-rtti -no-ipo -ip </td>
+  </tr>
+  <tr>
+    <td> IBM XLC (xlcxx) </td>
+    <td> BlueGene/P, BlueGene/Q </td>
+    <td> -qpack_semantic=gnu </td>
+  </tr>
+  <tr>
+    <td> <hr/> </td>
+    <td> <hr/> </td>
+    <td> <hr/> </td>
+  </tr>
+  <tr>
+    <td> mpich2 </td>
+    <td> Linux   </td>
+    <td> -DMPICH_IGNORE_CXX_SEEK -Wno-long-long</td>
+  </tr>
+  <tr>
+    <td> openmpi </td>
+    <td> Linux   </td>
+    <td> -DMPICH_IGNORE_CXX_SEEK -Wno-long-long</td>
+  </tr>
+  <tr>
+    <td> <hr/> </td>
+    <td> <hr/> </td>
+    <td> <hr/> </td>
+  </tr>
+  <tr>
+    <td> Intel TBB 4.0 </td>
+    <td> Linux   </td>
+    <td> -Wno-long-long</td>
+  </tr>
+  <tr>
+    <td> Intel TBB 4.0 </td>
+    <td> Windows   </td>
+    <td> /DTBB_USE_THREADING_TOOLS </td>
+  </tr>
+</table>
