@@ -101,6 +101,58 @@ I strongly appreciate if you buy the book, however there's also a
 </p>
 
 
+
+<h2>Users of Peano</h2>
+<center>
+<script src="http://www.ammap.com/lib/3/ammap.js" type="text/javascript"></script>
+<script src="http://www.ammap.com/lib/3/maps/js/worldHigh.js" type="text/javascript"></script>
+<div id="mapdiv" style="width: 1000px; height: 450px;"></div>
+
+<script type="text/javascript">
+    var map;
+    AmCharts.ready(function() {
+        map = new AmCharts.AmMap();
+        map.pathToImages = "http://www.ammap.com/lib/images/";
+        map.panEventsEnabled = true;
+        map.backgroundColor = "#666666";
+        map.backgroundAlpha = 1;
+        
+        map.zoomControl.panControlEnabled = true;
+        map.zoomControl.zoomControlEnabled = true;
+    
+        var dataProvider = {
+            mapVar: AmCharts.maps.worldHigh,
+            getAreasFromMap: true,
+            areas: [
+                { id: 'BE', showAsSelected: true },
+{ id: 'DE', showAsSelected: true },
+{ id: 'NL', showAsSelected: true },
+{ id: 'CH', showAsSelected: true },
+{ id: 'GB', showAsSelected: true },
+{ id: 'OM', showAsSelected: true },
+{ id: 'SA', showAsSelected: true },
+{ id: 'NZ', showAsSelected: true }
+            ]
+        };
+    
+        map.dataProvider = dataProvider;
+    
+        map.areasSettings = {
+            autoZoom: true,
+            color: "#CDCDCD",
+            colorSolid: "#5EB7DE",
+            selectedColor: "#5EB7DE",
+            outlineColor: "#666666",
+            rollOverColor: "#88CAE7",
+            rollOverOutlineColor: "#FFFFFF"
+        };
+    
+        map.write("mapdiv");
+    });
+</script>
+</center>
+If you are not on this list, please contact us via email to update our map. 
+
 <h2>Citing Peano</h2>
 <p>
 If you use Peano, please cite it as 
