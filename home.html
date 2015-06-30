@@ -37,7 +37,7 @@ Some properties are enlisted below.
   </tr>
   <tr>
     <td> Arbitrary spatial dimensions <br /> or space-time grids</td>
-    <td> OpenMP, TBB, or C++11 support <br /> (red-black colouring) </td>
+    <td> OpenMP and TBB support </td>
     <td> Multiscale data compression <br &> with reduced floating point <br /> accuracy </td>
     <td> Interface to <a href="http://numerics.kaust.edu.sa/pyclaw/" target="_blank">PyClaw/ClawPack</a> <br /> due to <a href="http://www.peano-framework.org/download.shtml">PeanoClaw</a> 
   </tr>
@@ -47,7 +47,9 @@ Some properties are enlisted below.
   </tr>
   <tr>
     <td> Low memory requirements </td>
+    <!--
     <td> Resiliency support due to <br /><a href="http://www.exascience.com/cobra/" target="_blank">Cobra</a> </td>
+    -->
   </tr>
   <tr>
     <td> Good cache and memory bus <br /> behaviour </td> 
@@ -196,9 +198,11 @@ A paper describing the fundamental algorithmic ideas of Peano is
     URL = {http://link.aip.org/link/?SCE/33/2732}
 }
 </pre>
+</td></tr></table>
 <p>
 while the arXiv preprint below describes its software architecture/paradigms.
 </p>
+<table  border="1"><tr><td>
 <pre>
 @TechReport{Weinzierl:15:Peano,
   author =   {T.~Weinzierl},
@@ -210,6 +214,9 @@ while the arXiv preprint below describes its software architecture/paradigms.
 }
 </pre>
 </td></tr></table>
+
+
+<!--
 <p>
   For the individual solvers realised on top of Peano, multiple papers and 
   several books (Ph.D. theses) do exist. Consult the <a href="http://www5.in.tum.de/" target="_blank">webpages</a> of 
@@ -277,3 +284,4 @@ while the arXiv preprint below describes its software architecture/paradigms.
     <td> /DTBB_USE_THREADING_TOOLS </td>
   </tr>
 </table>
+-->
