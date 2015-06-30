@@ -32,13 +32,14 @@ Some properties are enlisted below.
     <td> Arbitrary dynamic adaptivity </td>
     <td> MPI support (domain decomposition) </td>
     <td> In-situ data exploration </td>
-    <td> Interface to <a href="http://numerics.kaust.edu.sa/pyclaw/" target="_blank">PyClaw/ClawPack</a> <br /> due to <a href="http://www.peano-framework.org/download.shtml">PeanoClaw</a> 
+    <td> Peano is one of the building blocks of the <a href="http://www5.in.tum.de/forschung/exahype/" target="_blank">ExaHyPE</a> project 
    </td>
   </tr>
   <tr>
     <td> Arbitrary spatial dimensions <br /> or space-time grids</td>
     <td> OpenMP, TBB, or C++11 support <br /> (red-black colouring) </td>
     <td> Multiscale data compression <br &> with reduced floating point <br /> accuracy </td>
+    <td> Interface to <a href="http://numerics.kaust.edu.sa/pyclaw/" target="_blank">PyClaw/ClawPack</a> <br /> due to <a href="http://www.peano-framework.org/download.shtml">PeanoClaw</a> 
   </tr>
   <tr>
     <td> Inherent geometric multiscale <br /> representation of the computational <br /> domain </td>
@@ -56,13 +57,6 @@ Some properties are enlisted below.
   </tr>
 </table>
 
-<p>
-While the software was originally written for matrix-free geometric multigrid 
-solvers in computational fluid dynamics, it has meanwhile emancipated from this 
-single purpose and became a general-purpose AMR grid management and traversal 
-tool. 
-Other groups use it for Lattice-Boltzmann or particle codes.
-</p>
 
 
 
@@ -100,8 +94,12 @@ I strongly appreciate if you buy the book, however there's also a
 <a href="http://www5.in.tum.de/persons/weinzier/diss.pdf" target="_blank">download version</a>.
 </p>
 
+<p>
+ We also have a paper describing the software architecture. It is available from <a href="http://arxiv.org/abs/1506.04496">arXiv</a>.
+</p>
 
 
+<!--
 <h2>Users of Peano</h2>
 <center>
 <script src="http://www.ammap.com/lib/3/ammap.js" type="text/javascript"></script>
@@ -152,6 +150,8 @@ I strongly appreciate if you buy the book, however there's also a
 </script>
 </center>
 If you are not on this list, please contact us via email to update our map. 
+-->
+
 
 <h2>Citing Peano</h2>
 <p>
@@ -172,7 +172,7 @@ If you use Peano, please cite it as
 or refer to the book <a href="http://www.dr.hut-verlag.de/978-3-86853-146-6.html" target="_blank">A 
 Framework for Parallel PDE Solvers on Multiscale Adaptive Cartesian Grids</a> that is 
 also available <a href="http://www5.in.tum.de/wiki/index.php/Dr._rer._nat._Tobias_Weinzierl" target="_blank">online</a>. 
-A paper describing the fundamental ideas of Peano is 
+A paper describing the fundamental algorithmic ideas of Peano is 
 </p>
 <table  border="1"><tr><td>
 <pre>
@@ -194,6 +194,19 @@ A paper describing the fundamental ideas of Peano is
     year = {2011},
     ISSN = {1064-8275},
     URL = {http://link.aip.org/link/?SCE/33/2732}
+}
+</pre>
+<p>
+while the arXiv preprint below describes its software architecture/paradigms.
+</p>
+<pre>
+@TechReport{Weinzierl:15:Peano,
+  author =   {T.~Weinzierl},
+  title =    {The {P}eano software---parallel, automaton-based, dynamically adaptive grid traversals},
+  institution =  {Durham University},
+  year =     {2015},
+  number =   {2015arXiv150604496W},
+  OPTnote =      {eprint arXiv:1506.04496}
 }
 </pre>
 </td></tr></table>

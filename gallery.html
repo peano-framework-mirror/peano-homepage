@@ -3,37 +3,35 @@
 
 <table>
 
+
  <tr>
-   <td>
-    <img src="http://www5.in.tum.de/peano3/gallery/rotating-heat-source_2d.png" />
-    <br />
-    <a href="http://www5.in.tum.de/peano3/gallery/rotating-heat-source_2d-space-time.png" />
-      <img src="http://www5.in.tum.de/peano3/gallery/rotating-heat-source_2d-space-time_icon.png" />
-    </a>
-   </td>
    <td valign="top">
      <hr />
-     <h2>Rotating Heat Source</h2>
-     Simple parabolic benchmark problem with a rotating heat source in a two-dimensional
-     domain. There are two videos on this setup available.
-     The <a href="http://www5.in.tum.de/peano3/gallery/rotating-heat-source_2d.avi" target="_blank">2d</a> video 
-     illustrates the dynamic h-adaptivity while there is a 
-     <a href="http://www5.in.tum.de/peano3/gallery/rotating-heat-source_2d_space-time.avi" target="_blank">3d</a>
-     animation that visualises the on-the-fly grid construction for the same 2d problem in the 
-     space-time domain. 
-     The latter can be used for space-time solvers.
+    <h2>ExaHyPE</h2>
+    <p>
+      Peano is one of the building blocks of the H2020 project <a href="http://www5.in.tum.de/forschung/exahype/">ExaHyPE</a>.
+    </p>
+   </td>
+   <td>
+     <img src="http://www5.in.tum.de/forschung/exahype/exahype_scales.jpg" />
+     <center>
+     Screenshot of an ExaHyPE simulation. Not from Peano (yet).
+     </center>
    </td>
  </tr>
+
+
+
 
  <tr>
    <td valign="top">
      <hr />
     <h2>Lattice Boltzmann</h2>
-    <a href="http://www5.in.tum.de/wiki/index.php/Philipp_Neumann" target="_blank">Philipp 
-    Neumann's</a> Lattice-Boltzmann code: Flow around an obstacle on adaptive Cartesian grid.
-    There's a larget collection of Lattice-Boltzmann screenshots, data, and videos available 
-    at <a href="http://www5.in.tum.de/wiki/index.php/Super-Epsi%27s_videos_and_pics" target="_blank">this 
-    page</a>. This collection also is more representative and up-to-date. 
+    <p>
+      <a href="http://www5.in.tum.de/wiki/index.php/Philipp_Neumann" target="_blank">Philipp 
+      Neumann</a> uses Peano with his Lattice Boltzmann solver for various projects. A gallery 
+      can be found at <a href="http://www5.in.tum.de/wiki/index.php/Super-Epsi%27s_videos_and_pics">http://www5.in.tum.de/wiki/index.php/Super-Epsi%27s_videos_and_pics</a>.
+    </p> 
    </td>
    <td>
     <a href="http://www5.in.tum.de/peano3/gallery/lb_grid.png">
@@ -45,6 +43,34 @@
    </td>
  </tr>
 
+
+ <tr>
+   <td valign="top">
+     <hr />
+     <h2>Various algorithmic studies</h2>
+     <p>
+       <a href="https://community.dur.ac.uk/tobias.weinzierl">Tobias Weinzierl</a> obviously uses Peano 
+       as base for several different application studies. Examples and pictures can be found at 
+       <a href="https://community.dur.ac.uk/tobias.weinzierl/papers.html">https://community.dur.ac.uk/tobias.weinzierl/papers.html</a>.
+     </p>
+   </td>
+   <td>
+    <a href="http://www5.in.tum.de/peano3/gallery/pit_2d.png" />
+      <img src="http://www5.in.tum.de/peano3/gallery/pit_2d_icon.png" />
+    </a>
+    <a href="http://www5.in.tum.de/peano3/gallery/pit_3d.png" />
+      <img src="http://www5.in.tum.de/peano3/gallery/pit_3d_icon.png" />
+    </a>
+    <a href="http://www5.in.tum.de/peano3/gallery/rotating-heat-source_2d-space-time.png" />
+      <img src="http://www5.in.tum.de/peano3/gallery/rotating-heat-source_2d-space-time_icon.png" />
+    </a>
+   </td>
+ </tr> 
+
+
+
+
+<!--
  <tr>
    <td>
     <a href="http://www5.in.tum.de/peano3/gallery/peanoclaw_shockbubble0.png" />
@@ -102,48 +128,6 @@
      </p>
    </td>
  </tr>
+-->
 
- <tr>
-   <td valign="top">
-     <hr />
-     <h2>Particle-in-Tree</h2>
-     <p>
-     1.0e6 particles with random speed run through the unit square with reflecting boundaries. 
-     The grid is refined such that the number of particles per cell does not exceed ten. As the 
-     particles do not interact with each other, this is a pure algorithmic demonstrator for 
-     particles in Peano. It does not comprise any Physics.
-     There are also a <a href="http://www5.in.tum.de/peano3/gallery/pit_2d.avi" target="_blank">2d video</a> and a 
-     <a href="http://www5.in.tum.de/peano3/gallery/pit_3d.avi" target="_blank">3d video</a> available. 
-     Joint work of 
-     <a href="http://people.cs.kuleuven.be/~bart.verleye/" target="_blank">Bart Verleye</a> and 
-     <a href="https://www.dur.ac.uk/ecs/profiles/?id=12329" target="_blank">Tobias Weinzierl</a>.
-     </p>
-     <p>
-     Another 3d video can be found 
-     <a href="http://www5.in.tum.de/peano3/gallery/particles-3d.ogv" target="_blank">here</a>. 
-     It has a different colouring but also illustrates adaptive mesh refinement following a
-     particle distribution. This one is encoded as ogv.
-     </p>
-     <p>
-     Stefan Wallner and Robert Glas have coupled this particle formulation to the <a href="http://sourceforge.net/projects/swiftsim/" target="_blank">SWIFT</a> code.
-     Some videos on the Sedov blast done via this coupling can be found here:
-     <ul>
-       <li><a href="http://www5.in.tum.de/peano3/gallery/picard/movie.ogv">movie</a></li>
-       <li><a href="http://www5.in.tum.de/peano3/gallery/picard/movie2.ogv">movie2</a></li> 
-       <li><a href="http://www5.in.tum.de/peano3/gallery/picard/movieSedovBlastLargeNoMoveWireFrame.ogv">Sedov blast with wire frame</a></li> 
-       <li><a href="http://www5.in.tum.de/peano3/gallery/picard/movieSedovBlastLarge.ogv">Sedov blast</a></li> 
-       <li><a href="http://www5.in.tum.de/peano3/gallery/picard/movie_stat_of_the_art.m4v">Another Sedov blast (m4v)</a></li> 
-       <li><a href="http://www5.in.tum.de/peano3/gallery/picard/movie_stat_of_the_art.ogv">Another Sedov blast (ogv)</a></li> 
-     </ul> 
-     </p>
-   </td>
-   <td>
-    <a href="http://www5.in.tum.de/peano3/gallery/pit_2d.png" />
-      <img src="http://www5.in.tum.de/peano3/gallery/pit_2d_icon.png" />
-    </a>
-    <a href="http://www5.in.tum.de/peano3/gallery/pit_3d.png" />
-      <img src="http://www5.in.tum.de/peano3/gallery/pit_3d_icon.png" />
-    </a>
-   </td>
- </tr> 
 </table>
