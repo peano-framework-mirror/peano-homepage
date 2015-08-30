@@ -1,4 +1,3 @@
-
 <center>
   <img src="logo.png" />
 </center>
@@ -21,6 +20,29 @@ geometry representations, and other features.
 Some properties are enlisted below.
 </p>
 
+<p>
+Peano is currently available in its third generation.
+The development of the original set of Peano codes started around 2002.
+2005-2009, we merged these codes into one Peano kernel (2nd generation).
+2009, I started a complete reimplementation of the kernel with special emphasis on
+reusability, application-independent design and the support for rapid prototyping.
+Currently, HPC challenges and extensions dominate the development.  
+</p>
+
+<p>
+Peano is plain C++ code and depends only on MPI and Intel's TBB or OpenMP if you want 
+to run it with distributed or shared memory support.
+C++ 11 is used.
+There are no further dependencies or libraries required.
+If you intend to use Peano, we provide a small Java tool to facilitate rapid 
+prototyping and to get rid of writing glue code.
+This Peano Development Toolkit (PDT) is pure Java and uses <a href="http://www5.in.tum.de/dastgen/">DaStGen</a>.
+While we provide the PDT's sources, there's also a jar file available that comprises all required 
+Java libraries and runs stand alone. 
+</p>
+
+
+
 <table  border="1" style="background-color:#dedeee">
   <tr>
     <td> <b>Features</b> </td>
@@ -32,7 +54,7 @@ Some properties are enlisted below.
     <td> Arbitrary dynamic adaptivity </td>
     <td> MPI support (domain decomposition) </td>
     <td> In-situ data exploration </td>
-    <td> Peano is one of the building blocks of the <a href="http://www5.in.tum.de/forschung/exahype/" target="_blank">ExaHyPE</a> project 
+    <td> Peano is one of the building <br />blocks of the <a href="http://www5.in.tum.de/forschung/exahype/" target="_blank">ExaHyPE</a> project 
    </td>
   </tr>
   <tr>
@@ -60,13 +82,38 @@ Some properties are enlisted below.
 </table>
 
 
+<h2>Recent News</h2>
+
+<ul>
+  <li>
+    2015-09: <i>Webpage update</i><br />
+    Following recommendations of the <a href="http://www.software.ac.uk/">Software Sustainability Institute</a>, I will restructure the webpage throughout the next months. 
+    Please pay special attention to the documentation sections.
+  </li>
+  <li>
+    2015-08: <i>Data compression</i><br />
+    We've added a new class to the heap namespace that allows codes to compress their double and floating point data. The class
+    allows codes to prescribe the precision they need. Its methods then decompose the floating point variable such that few 
+    chars are sufficient to store the value. Details will be presented in my ParCo 2015 talk. 
+  </li>
+  <li>
+    2015-04: <i>ExaHyPE</i><br />
+    The H2020 project <a href="http://www5.in.tum.de/forschung/exahype/" target="_blank">ExaHyPE</a> got granted. ExaHyPE will rely on Peano as grid management and 
+    we will continue to improve the software due to this grant. 
+  </li>
+  <li>
+    2015-02: <i>Support for particles added</i><br />
+    Because of our recent work on particle-in-cell methods (<a href="http://arxiv.org/abs/1508.02435">arXiv preprint</a>), Peano now allows users to embed particles into the grid.
+    This is made possible by Peano's heap. I've uploaded a small toolbox that realises the paper's algorithms and allows any application to use particles without any coding to 
+    insert them into the cell into which they belong accoring to their position in space. If particles move, the embedding is updated automatically.
+  </li>
+</ul>
 
 
-<h2>Copyright and Support</h2>
-<p>
-Peano is open source software primarily developed from 2009-2012 at Technische Universit&auml;t M&uuml;nchen.
-Today, most enhancements are done at Durham University.
-It is delivered as source code only and 
+<!--
+Support
+
+ and 
 its license is available on the Copyright page to your left. 
 As support, there is a Peano developer list, but noone commits to give support.
 To subscribe/unsubscribe, visit <a href="https://sourceforge.net/p/peano/mailman/" target="_blank">the
@@ -74,9 +121,10 @@ mailman</a>.
 For bug reports, please also register to the maillist and post your bug description to the 
 Peano community.
 If you need further information on Peano, please contact <a href="mailto:info(at)peano-framework.org">the info email</a>.
-</p>
+-->
 
 
+<!--
 <h2>Documentation</h2>
 <p>
 Most of the documentation is done directly in the source code, but there are 
@@ -99,7 +147,7 @@ I strongly appreciate if you buy the book, however there's also a
 <p>
  We also have a paper describing the software architecture. It is available from <a href="http://arxiv.org/abs/1506.04496">arXiv</a>.
 </p>
-
+-->
 
 <!--
 <h2>Users of Peano</h2>
@@ -165,7 +213,7 @@ If you use Peano, please cite it as
   author = {Tobias Weinzierl and others},
   title  = {Peano---a {F}ramework for {PDE} {S}olvers on {S}pacetree {G}rids},
   url    = {http://www.peano-framework.org},
-  year   = {2012},
+  year   = {201x},   % adopt to your paper
   note   = {http://www.peano-framework.org}
 }
 </pre>
