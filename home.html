@@ -113,99 +113,6 @@ Java libraries and runs stand alone.
 </ul>
 
 
-<!--
-Support
-
- and 
-its license is available on the Copyright page to your left. 
-As support, there is a Peano developer list, but noone commits to give support.
-To subscribe/unsubscribe, visit <a href="https://sourceforge.net/p/peano/mailman/" target="_blank">the
-mailman</a>.
-For bug reports, please also register to the maillist and post your bug description to the 
-Peano community.
-If you need further information on Peano, please contact <a href="mailto:info(at)peano-framework.org">the info email</a>.
--->
-
-
-<!--
-<h2>Documentation</h2>
-<p>
-Most of the documentation is done directly in the source code, but there are 
-some mini tutorials available in the project wiki. Also, the example applications
-might be a good starting point to get familiar with Peano.
-</p>
-<center>
-<table  border="1"><tr><td>
-<img src="http://www5.in.tum.de/persons/weinzier/diss.jpg" />
-</td></tr></table>
-</center>
-<p>
-The fundamental algorithmic ideas are described in the 
-<a href="http://www.hut-verlag.de/978-3-86853-146-6.html" target="_blank">book</a> from above and the SISC paper 
-mentioned below. You also find the full BibTeX reference for the book below.
-I strongly appreciate if you buy the book, however there's also a 
-<a href="http://www5.in.tum.de/persons/weinzier/diss.pdf" target="_blank">download version</a>.
-</p>
-
-<p>
- We also have a paper describing the software architecture. It is available from <a href="http://arxiv.org/abs/1506.04496">arXiv</a>.
-</p>
--->
-
-<!--
-<h2>Users of Peano</h2>
-<center>
-<script src="http://www.ammap.com/lib/3/ammap.js" type="text/javascript"></script>
-<script src="http://www.ammap.com/lib/3/maps/js/worldHigh.js" type="text/javascript"></script>
-<div id="mapdiv" style="width: 1000px; height: 450px;"></div>
-
-<script type="text/javascript">
-    var map;
-    AmCharts.ready(function() {
-        map = new AmCharts.AmMap();
-        map.pathToImages = "http://www.ammap.com/lib/images/";
-        map.panEventsEnabled = true;
-        map.backgroundColor = "#666666";
-        map.backgroundAlpha = 1;
-        
-        map.zoomControl.panControlEnabled = true;
-        map.zoomControl.zoomControlEnabled = true;
-    
-        var dataProvider = {
-            mapVar: AmCharts.maps.worldHigh,
-            getAreasFromMap: true,
-            areas: [
-                { id: 'BE', showAsSelected: true },
-{ id: 'DE', showAsSelected: true },
-{ id: 'NL', showAsSelected: true },
-{ id: 'CH', showAsSelected: true },
-{ id: 'GB', showAsSelected: true },
-{ id: 'OM', showAsSelected: true },
-{ id: 'SA', showAsSelected: true },
-{ id: 'NZ', showAsSelected: true }
-            ]
-        };
-    
-        map.dataProvider = dataProvider;
-    
-        map.areasSettings = {
-            autoZoom: true,
-            color: "#CDCDCD",
-            colorSolid: "#5EB7DE",
-            selectedColor: "#5EB7DE",
-            outlineColor: "#666666",
-            rollOverColor: "#88CAE7",
-            rollOverOutlineColor: "#FFFFFF"
-        };
-    
-        map.write("mapdiv");
-    });
-</script>
-</center>
-If you are not on this list, please contact us via email to update our map. 
--->
-
-
 <h2>Citing Peano</h2>
 <p>
 If you use Peano, please cite it as 
@@ -251,7 +158,7 @@ A paper describing the fundamental algorithmic ideas of Peano is
 </pre>
 </td></tr></table>
 <p>
-while the arXiv preprint below describes its software architecture/paradigms.
+while the <a href="http://arxiv.org/abs/1506.04496">arXiv preprint</a> below describes its software architecture/paradigms.
 </p>
 <table  border="1"><tr><td>
 <pre>
@@ -265,74 +172,3 @@ while the arXiv preprint below describes its software architecture/paradigms.
 }
 </pre>
 </td></tr></table>
-
-
-<!--
-<p>
-  For the individual solvers realised on top of Peano, multiple papers and 
-  several books (Ph.D. theses) do exist. Consult the <a href="http://www5.in.tum.de/" target="_blank">webpages</a> of 
-  the TUM group, the links above, or the gallery to the left, e.g.
-</p>
-
-
-<h2>Supported environments</h2>
-
-
-<table>
-  <tr>
-    <td> <b>Compiler/lib</b> </td> 
-    <td> <b>System</b> </td>
-    <td> <b>Recommended options</b> </td>
-  </tr>
-  <tr>
-    <td> gcc 4.7 (g++) </td>
-    <td> Linux   </td>
-    <td>-O3 -pedantic -pedantic-errors -Wall -Werror -Wstrict-aliasing -fstrict-aliasing</td>
-  </tr>
-  <tr>
-    <td> Intel 13.0.1 (icpc) </td>
-    <td> Linux   </td>
-    <td> /DNOMINMAX /D__WIN32__ /O3 /Ob0 /QxSSE4.2 /Qip /Zi </td>
-  </tr>
-  <tr>
-    <td> Intel 13.0.1 (icl) </td>
-    <td> Windows </td>
-    <td> -fast -fstrict-aliasing  -DMPICH_IGNORE_CXX_SEEK -fast -fno-rtti -no-ipo -ip </td>
-  </tr>
-  <tr>
-    <td> IBM XLC (xlcxx) </td>
-    <td> BlueGene/P, BlueGene/Q </td>
-    <td> -qpack_semantic=gnu </td>
-  </tr>
-  <tr>
-    <td> <hr/> </td>
-    <td> <hr/> </td>
-    <td> <hr/> </td>
-  </tr>
-  <tr>
-    <td> mpich2 </td>
-    <td> Linux   </td>
-    <td> -DMPICH_IGNORE_CXX_SEEK -Wno-long-long</td>
-  </tr>
-  <tr>
-    <td> openmpi </td>
-    <td> Linux   </td>
-    <td> -DMPICH_IGNORE_CXX_SEEK -Wno-long-long</td>
-  </tr>
-  <tr>
-    <td> <hr/> </td>
-    <td> <hr/> </td>
-    <td> <hr/> </td>
-  </tr>
-  <tr>
-    <td> Intel TBB 4.0 </td>
-    <td> Linux   </td>
-    <td> -Wno-long-long</td>
-  </tr>
-  <tr>
-    <td> Intel TBB 4.0 </td>
-    <td> Windows   </td>
-    <td> /DTBB_USE_THREADING_TOOLS </td>
-  </tr>
-</table>
--->
