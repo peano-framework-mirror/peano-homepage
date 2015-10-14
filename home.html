@@ -57,18 +57,19 @@ Java libraries and runs stand alone.
     <td> Arbitrary dynamic adaptivity </td>
     <td> MPI support (domain decomposition) </td>
     <td> In-situ data exploration </td>
-    <td> Peano is one of the building <br />blocks of the <a href="http://www5.in.tum.de/forschung/exahype/" target="_blank">ExaHyPE</a> project 
-   </td>
+    <td> Peano is one of the building <br />blocks of the <a href="http://www5.in.tum.de/forschung/exahype/" target="_blank">ExaHyPE</a> project </td>
   </tr>
   <tr>
     <td> Arbitrary spatial dimensions <br /> or space-time grids</td>
     <td> OpenMP and TBB support </td>
     <td> Multiscale data compression <br &> with reduced floating point <br /> accuracy </td>
-    <td> Interface to <a href="http://numerics.kaust.edu.sa/pyclaw/" target="_blank">PyClaw/ClawPack</a> <br /> due to <a href="http://www.peano-framework.org/download.shtml">PeanoClaw</a> 
+    <td> Interface to <a href="http://www.mcs.anl.gov/petsc/" target="_blank">PETSc</a> </td> 
   </tr>
   <tr>
     <td> Inherent geometric multiscale <br /> representation of the computational <br /> domain </td>
     <td> Plug-in points for hybrid <br /> load balancing </td>
+    <td> </td>
+    <td> Interface to <a href="http://numerics.kaust.edu.sa/pyclaw/" target="_blank">PyClaw/ClawPack</a> <br /> due to <a href="http://www.peano-framework.org/download.shtml">PeanoClaw</a> 
   </tr>
   <tr>
     <td> Low memory requirements </td>
@@ -125,50 +126,6 @@ If you use Peano, please cite it as
   url    = {http://www.peano-framework.org},
   year   = {201x},   % adopt to your paper
   note   = {http://www.peano-framework.org}
-}
-</pre>
-</td></tr></table>
-<p>
-or refer to the book <a href="http://www.dr.hut-verlag.de/978-3-86853-146-6.html" target="_blank">A 
-Framework for Parallel PDE Solvers on Multiscale Adaptive Cartesian Grids</a> that is 
-also available <a href="http://www5.in.tum.de/wiki/index.php/Dr._rer._nat._Tobias_Weinzierl" target="_blank">online</a>. 
-A paper describing the fundamental algorithmic ideas of Peano is 
-</p>
-<table  border="1"><tr><td>
-<pre>
-@article{weinzierl11peano,
-    author = {Weinzierl, Tobias and Mehl, Miriam},
-    journal = {SIAM Journal on Scientific Computing},
-    editor = {Tuminaro, R. and Benzi, M. and Cai, X.-C. and Duff, I. and Elman, H. and 
-              Freund, R. and Jordan, K. and Kelley, T. and Keyes, D. and Kilmer, M. and 
-              Leyffer, S. and Manteuffel, T. and McCormick, S. and Silvester, D. and 
-              Walker, H. and Woodward, C. and Yavneh, I.},
-    institution = {SIAM},
-    month = oct,
-    number = {5},
-    organization = {SIAM},
-    pages = {2732--2760},
-    series = {Special Section: 2010 Copper Mountain Conference},
-    title = {Peano -- A Traversal and Storage Scheme for Octree-Like Adaptive Cartesian Multiscale Grids},
-    volume = {33},
-    year = {2011},
-    ISSN = {1064-8275},
-    URL = {http://link.aip.org/link/?SCE/33/2732}
-}
-</pre>
-</td></tr></table>
-<p>
-while the <a href="http://arxiv.org/abs/1506.04496">arXiv preprint</a> below describes its software architecture/paradigms.
-</p>
-<table  border="1"><tr><td>
-<pre>
-@TechReport{Weinzierl:15:Peano,
-  author =   {T.~Weinzierl},
-  title =    {The {P}eano software---parallel, automaton-based, dynamically adaptive grid traversals},
-  institution =  {Durham University},
-  year =     {2015},
-  number =   {2015arXiv150604496W},
-  OPTnote =      {eprint arXiv:1506.04496}
 }
 </pre>
 </td></tr></table>
