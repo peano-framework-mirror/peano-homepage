@@ -24,7 +24,13 @@ The Peano checkout comes along with all unit and integration tests which are ran
 You can assume that the download version/versions in the repository all are stable.
 The archive online does not depend on any third-party library besides MPI/TBB/OpenMP headers and libs.
 </p>
-
+<p>
+Note: Many supercomputing centres do block the standard svn port. In this case, you will receive
+an svn timeout. You then have to use http.
+</p>
+<pre>
+svn checkout http://svn.code.sf.net/p/peano/code/trunk peano-code
+</pre>
 
 
 <h2>ExaHyPE</h2>
