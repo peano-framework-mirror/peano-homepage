@@ -1,9 +1,90 @@
 <h1>Gallery</h1>
 
+<script>
+ var video = document.getElementById('video');
+ video.addEventListener('click',function(){
+  video.play();
+ },false);
+</script>
+
+
+<h2>Particle in Cell methods</h2>
+
+<video width="400" height="300" controls="controls" autoplay="autoplay">
+  <source src="http://www5.in.tum.de/peano3/gallery/pit_2d.avi" type="video/avi">
+  Your browser does not support the video tag.
+</video>
+<video width="400" height="300" controls="controls" autoplay="autoplay" poster="https://community.dur.ac.uk/tobias.weinzierl/papers/pic2014/screenshot-13.png">
+  <source src="http://www5.in.tum.de/peano3/gallery/pit_3d.avi" type="video/avi">
+  Your browser does not support the video tag.
+</video>
+<video width="400" height="300" controls="controls" autoplay="autoplay">
+  <source src="http://www5.in.tum.de/peano3/gallery/particles-3d.ogv" type="video/ogv">
+  Your browser does not support the video tag.
+</video>
+<video width="400" height="300" controls="controls" autoplay="autoplay">
+  <source src="http://www5.in.tum.de/peano3/gallery/picard/movie_stat_of_the_art.m4v" type="video/m4v">
+  <source src="http://www5.in.tum.de/peano3/gallery/picard/movie_stat_of_the_art.ogv" type="video/ogv">
+  Your browser does not support the video tag.
+</video>
 
 <p>
-I'm currently working on a relaunch of the gallery. It will follow the pictures from the Peano QuickStarter guide that I just started to write.
+ Illustrations stem from the papers
+ <pre>
+ Weinzierl, T., Verleye, B., Henri, P. & Roose, D. (2016). Two Particle-in-Grid Realisations on Spacetrees. Parallel Computing 52: 42-64.
+
+ Eckhardt, W., Glas, R., Korzh, D., Wallner, S. & Weinzierl, T. (2016), On-the-fly memory compression for multibody algorithms, in Joubert, G.R., Leather, H., Parsons, M., Peters, F. & Sawyer, M. eds, Advances in Parallel Computing 27: International Conference on Parallel Computing (ParCo) 2015. Edinburgh, Scotland, IOS Press, Amsterdam, 421-430.
+ </pre>
+ The underlying particle management within Peano is available as predefined user toolbox: 
+ if you want to use it, its merely a few simple additions to the specification file. 
+ No particle update has to be rewritten.
 </p>
+
+
+
+
+
+
+<h2>PeanoClaw/hyperbolic solvers</h2>
+
+
+ 
+
+
+
+
+
+
+<video width="400" height="300" controls="controls" autoplay="autoplay">
+  <source src="http://www5.in.tum.de/persons/unterweg/peanoclaw/ShockBubble_162_18_6.avi" type="video/avi">
+  Your browser does not support the video tag.
+</video>
+<video width="400" height="300" controls="controls" autoplay="autoplay">
+  <source src="http://www5.in.tum.de/persons/unterweg/peanoclaw/ShockBubble_162_18_6_Grid.avi" type="video/avi">
+  Your browser does not support the video tag.
+</video>
+<video width="400" height="300" controls="controls" autoplay="autoplay">
+  <source src="http://www5.in.tum.de/persons/unterweg/peanoclaw/Storegga_2916_108_12.avi" type="video/ogv">
+  Your browser does not support the video tag.
+</video>
+<video width="400" height="300" controls="controls" autoplay="autoplay">
+  <source src="http://www5.in.tum.de/persons/unterweg/peanoclaw/Storegga_2916_108_12_Subgrids.avi" type="video/avi">
+  Your browser does not support the video tag.
+</video>
+
+<p>
+ Illustrations stem from the dissertation
+ <pre>
+ K. Unterweger: High-Performance Coupling of Dynamically Adaptive Grids and Hyperbolic Equation Systems, 2016
+ </pre>
+ The underlying patch management within Peano is available as predefined user toolbox: 
+ if you want to use it, its merely a few simple additions to the specification file. 
+ This toolbox is also used in the <a href="http://www.exahype.eu">ExaHyPE</a> project.
+ The shockbubble experiment above uses the 3D Euler solver of David Ketcheson as found in the Clawpack solver.
+ The tsunami simulation uses shallow water kernels by Michael Bader's group with a bathymetry from GEBCO (
+ The GEBCO_08 Grid, version 20100927, <a href="http://www.gebco.net">http://www.gebco.net</a> ).
+</p>
+
 
 
 <!--
