@@ -11,14 +11,8 @@
 <h2>Helmholtz problems: geometric additive multigrid, hierarchical basis and BPX-type solvers</h2>
 
 <table width="60%">
- <tr><td>
-  <img src="gallery/helmholtz.png" />
- </td>
- <td>
-  <video width="400" height="300" controls="controls" autoplay="autoplay">
-    <source src="https://community.dur.ac.uk/tobias.weinzierl/papers/helmholtz2015/two-particles.ogv" type="video/ogg">
-    Your browser does not support the video tag.
-  </video>
+ <tr>
+ <td valign="top">
   <p>
    This work is based upon work I've published together with Bram Reps as
   </p>
@@ -29,8 +23,44 @@
   <p>
    You can read a preprint at <a href="http://arxiv.org/abs/1508.03954" target="_blank">arXiv</a>.
    A source code snapshot of the code used for the paper is available 
-   <a href="...">here</a>.
+   <a href="https://sourceforge.net/projects/peano/files/demo-codes">here</a>. 
+   Please note that this is a complete snapshot of 
+   Peano with all of its glue code and the matrixfree toolbox which is a small 
+   collection of routines I use for matrix free linear algebra. As it is a 
+   snapshot, both Peano and its toolbox might be available as newer versions 
+   today, and it might be reasonable to rewrite a solver from scratch if you 
+   need one for a particular project. This snapshot is merely made available 
+   as a documentation and to facilitate reproducability. Here are some 
+   things to do if you work with the snapshot:
   </p>
+  <ol>
+   <li>Download the code snapshot from <a href="https://sourceforge.net/projects/peano/files/demo-codes">Peano's demo code section</a>.
+   <li>Untar the archive with <pre>tar -xzvf helmholtz-snapshot.tar.gz</pre>.
+   <li>Type in <pre>make</pre> which gives you a list of available build targets. You might have to update the makefile 
+     however to adopt pathes or variables. For a quick start with the GNU compiler, try <pre>make gcc-release-dim2</li>
+   <li>There is a script create-main-executables that builds (with Intel) all the executables used in the paper. There are 
+     release and asserts variants, we have dimensions 2 through 7, there are vectorised (with pragmas) and not vectorised versions,
+     and we have multichannel variants where the number of channels is set through the environment variable CHANNELS. 
+     Not all possible combinations are currently provided through the makefile, but the extension of the file should be straightforward
+     if you need additional targets.</li>
+   <li>Once you have an executable at hand, run the code <pre>./peano-2d-gcc-release</pre> without any argument. It displays a usage 
+     message. <pre>./peano-2d-gcc-release help</pre> yields more verbose output.</li>
+   <li>A first experiment might be <pre>./peano-2d-gcc-release sin transition 0.7 0.1 0.01 yes no 100 101</pre>
+     Our code writes binary legacy VTK files that you can open with Paraview or VisIt, e.g. The file sequence of
+     interest in the first place is channel-0-finegrid*. The files hold one snapshot per iteration, i.e. you can 
+     investigate the evolution of the adaptivity pattern.</li>
+   <li>If you want to study the algorithm's implementation, the most interesting file should be helmholtz/mappings/AdditiveMultigridWithJacobi.cpp 
+     and variants of this file.</li>
+  </ol>
+ </td>
+ <td>
+  <img src="gallery/helmholtz00.png" width="320px"/> <br />
+  <img src="gallery/helmholtz01.png" width="320px" /> <br />
+  <img src="gallery/helmholtz02.png" width="320px" /> <br />
+  <video width="320" height="300" controls="controls" autoplay="autoplay">
+    <source src="https://community.dur.ac.uk/tobias.weinzierl/papers/helmholtz2015/two-particles.ogv" type="video/ogg">
+    Your browser does not support the video tag.
+  </video>
  </td>
  </tr>
 </table>
