@@ -8,17 +8,61 @@
 </script>
 
 
+<h2>Multigrid solvers: BoxMG in Peano</h2>
+
+<table><tr>
+ <td><img src="gallery/boxmg-3d.png" /></td>
+ <td>
+<p>
+ Together with Marion Weinzierl, I've submitted a paper
+</p>
+<pre>
+ Marion Weinzierl, Tobias Weinzierl: Quasi-matrix-free hybrid multigrid on dynamically adaptive Cartesian grids. ACM Transactions on Mathematical Software
+</pre>
+<p>
+ A preprint is available from <a href="https://arxiv.org/abs/1607.00648">arXiv</a>. 
+ In the paper, we discuss various realisation idioms for multigrid that fuse ideas 
+ of FAS, hierarchical generating systems, Galerkin coarse grid operator computations, 
+ stencil compression and BoxMG determining problem-dependent inter-grid transfer operators.  
+ It should be very straightforward to reconstruct the ideas from the paper at hands of a Peano download.
+ However, I summarise the most important points/pitfalls here:
+</p>
+<ul>
+ <li>The purely geometric multigrid solvers basically follow the Chapter 4.2 from the Peano cookbook.</li>
+ <li>For the Galerkin and BoxMG part of the manuscript, we add an integer index to each vertex and make it point 
+  to a PlainDoubleHeap entry. The stencils are stored on Peano's heap. See the class peano::heap::DoubleHeap for a 
+  documentation.
+ </li>
+ <li>To compute Galerkin operators and the BoxMG operators from stencils stored within the vertex can be 
+  tedious and error-prone. A similar reasoning holds for the computation of the stencils. Peano offers a 
+  toolbox matrixfree that provides routines for this. See the download section or sourceforge. Notably, consult
+  <ul>
+   <li>matrixfree::stencil::StencilFactory for routines that yield standard FEM stencils for diffusion and convection operators.</li>
+   <li>matrixfree::stencil::ElementMatrix for routines that allow you to extract from the 4/8 vertices of a cell the element stiffness matrices.</li>
+   <li>matrixfree::solver::Multigrid for routines that accept prolongation, restriction and operator stencils and return the Galerkin coarse 
+    grid operators. The class also provides dummies that make prolongation and restriction be d-linear operators.</li>
+   <li>matrixfree::solver::BoxMG offers routines that accept the stencils of one fine grid patch as one large vector and return the BoxMG operators
+    (or simple aggregation or injection).</li> 
+  </ul>
+  The classes and functions in the namespace matrixfree have been built with Peano in mind but they do not 
+  directly use Peano for most routines. Instead, they rely on simple double vectors as input. As a result 
+  you can also use them in different projects.
+ </li>
+</ul>
+ </td></tr></table>
+
+
 <h2>Helmholtz problems: geometric additive multigrid, hierarchical basis and BPX-type solvers</h2>
 
 <table width="60%">
  <tr>
  <td valign="top">
   <p>
-   This work is based upon work I've published together with Bram Reps as
+   This work is based upon work I've submitted together with Bram Reps as
   </p>
   <pre>
    Bram Reps, Tobias Weinzierl: Complex additive geometric multilevel solvers for Helmholtz 
-   equations on spacetrees. ACM Transactions on Mathematical Software (accepted)
+   equations on spacetrees. ACM Transactions on Mathematical Software
   </pre>
   <p>
    You can read a preprint at <a href="http://arxiv.org/abs/1508.03954" target="_blank">arXiv</a>.
